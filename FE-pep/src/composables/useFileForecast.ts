@@ -15,7 +15,7 @@ export function useFileForecast() {
     formData.append('file', file)
 
     try {
-      const res = await fetch('http://localhost:8000/ai/dudoan_fasta_pdf', {
+      const res = await fetch('http://localhost:8080/ai/dudoan_fasta_pdf', {
         method: 'POST',
         body: formData,
       })
@@ -40,7 +40,7 @@ export function useFileForecast() {
     formData.append('file', file)
 
     try {
-      const res = await fetch('http://localhost:8000/ai/dudoan_fasta', {
+      const res = await fetch('http://localhost:8080/ai/dudoan_fasta', {
         method: 'POST',
         body: formData,
       })

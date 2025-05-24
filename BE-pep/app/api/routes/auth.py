@@ -21,7 +21,6 @@ async def google_callback(code: str):
     user["_id"] = str(user["_id"])
     token = create_jwt_token(user["email"])
 
-    # 👉 CHUYỂN dict Python → JSON string
     user_json = json.dumps(user)
 
     html_content = f"""
