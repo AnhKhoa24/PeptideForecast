@@ -23,7 +23,7 @@ export function useAuth() {
 
     function loginWithGoogle() {
         window.open(
-            'http://localhost:8080/auth/login/google',
+            'https://peptideforecast.onrender.com/auth/login/google',
             '_blank',
             'width=500,height=600'
         )
@@ -34,7 +34,7 @@ export function useAuth() {
         if (!token) return
 
         try {
-            const res = await fetch('http://localhost:8080/user/profile', {
+            const res = await fetch('https://peptideforecast.onrender.com/user/profile', {
                 headers: { token }
             })
             const data = await res.json()
