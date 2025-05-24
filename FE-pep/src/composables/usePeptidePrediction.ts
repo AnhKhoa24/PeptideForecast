@@ -37,12 +37,12 @@ export function usePeptidePrediction() {
     try {
       // Call backend to get PDB + prediction
       const [pdbRes, predRes] = await Promise.all([
-        fetch('http://localhost:8080/ai/generate_pdb', {
+        fetch('https://peptideforecast.onrender.com/ai/generate_pdb', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ sequence: sequence.value })
         }),
-        fetch('http://localhost:8080/ai/dudoan', {
+        fetch('https://peptideforecast.onrender.com/ai/dudoan', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ sequence: sequence.value })

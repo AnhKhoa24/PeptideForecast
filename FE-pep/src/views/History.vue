@@ -77,7 +77,7 @@ function formatDate(dateStr) {
 
 async function fetchHistory() {
   try {
-    const res = await fetch('http://localhost:8080/access/getLS', {
+    const res = await fetch('https://peptideforecast.onrender.com/access/getLS', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ async function confirmDelete(id) {
 
 async function deleteHistory(id) {
   try {
-    const res = await fetch('http://localhost:8080/access/delete', {
+    const res = await fetch('https://peptideforecast.onrender.com/access/delete', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -183,7 +183,7 @@ async function save() {
   }
 
   try {
-    const res = await fetch('http://localhost:8080/access/saveLS', {
+    const res = await fetch('https://peptideforecast.onrender.com/access/saveLS', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
