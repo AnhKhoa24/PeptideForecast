@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np
+
 def interpolate_inputs(baseline, input, alphas):
     return baseline + alphas * (input - baseline)
 

@@ -2,11 +2,13 @@ from fastapi import FastAPI, Depends
 from app.api.routes import auth, user, peptide3d, classification, history
 from fastapi.middleware.cors import CORSMiddleware
 from app.dependencies.auth import get_current_user
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"], 
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],  
     allow_headers=["*"], 
